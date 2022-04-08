@@ -2,7 +2,7 @@ name: SampleApp_$(Date:yyyyMMDD)$(Rev:r)
 trigger:
 - Main
 pool:  
-- name: 'Default'
+  vmImage: ubuntu-latest
 steps:
 - task: MSBuild@1
   inputs:
