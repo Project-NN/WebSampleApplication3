@@ -2,7 +2,7 @@ name: SampleApp_$(Date:yyyyMMDD)$(Rev:r)
 trigger:
 - Main
 pool:  
-  vmImage: ubuntu-latest
+  MVCLocalPool
 steps:
 - task: MSBuild@1
   inputs:
