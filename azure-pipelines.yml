@@ -1,7 +1,7 @@
 name: SampleApp_$(Date:yyyyMMDD)$(Rev:r)
 trigger:
 -Main
-pool:
+pool:  
 -name:Default
 steps:
 - task: MSBuild@1
