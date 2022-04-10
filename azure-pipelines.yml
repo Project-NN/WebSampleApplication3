@@ -6,9 +6,7 @@ trigger:
 pool:  
   MVCLocalPool
 steps:
-- task: NuGetToolInstaller@1
-  inputs:
-    versionSpec: 
+
     - task: DotNetCoreCLI@2
       inputs:
         command: 'build'
