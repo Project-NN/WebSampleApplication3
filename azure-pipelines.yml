@@ -1,11 +1,11 @@
 name: SampleApp_$(Date:yyyyMMDD)$(Rev:r)
+
 trigger:
 - Main
 pool:  
   MVCLocalPool
 steps:
-- task: MSBuild@1
+- task: VSBuild@1
   inputs:
-    solution: '**/*.sln'
-    msbuildArguments: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfiguration=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
-
+    solution: '**\*.sln'
+    configuration: '''/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfiguration=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'''
