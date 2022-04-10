@@ -1,10 +1,14 @@
 name: SampleApp_$(Date:yyyyMMDD)$(Rev:r)
 
+
 trigger:
 - Main
 pool:  
   MVCLocalPool
 steps:
-- task: VSBuild@1
+- task: NuGetToolInstaller@1
   inputs:
-    solution: '**\*.sln'
+    versionSpec: 
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'build'
