@@ -8,4 +8,3 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '**\*.sln'
-    configuration:' DeployOnBuild=true WebPublishMethod=Package PackageAsSingleFile=true SkipInvalidConfiguration=true PackageLocation="$(build.artifactstagingdirectory)\\"'
